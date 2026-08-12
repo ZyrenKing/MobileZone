@@ -1,0 +1,28 @@
+{
+    "phones": [
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S24 Ultra",
+            "price": 5499,
+            "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600&h=800&fit=crop",
+            "battery": "5000 mAh",
+            "screen": "6.8\" Dynamic AMOLED 2X",
+            "processor": "Snapdragon 8 Gen 3",
+            "ram": "12 GB",
+            "storage": "512 GB",
+            "description": "هاتف Samsung Galaxy S24 Ultra مع قلم S Pen المدمج وكاميرا رباعية بدقة 200 ميجابكسل. يدعم الذكاء الاصطناعي Galaxy AI مع شاشة مذهلة بدقة QHD+."
+        },
+        {
+            "id": 3,
+            "name": "Google Pixel 8 Pro",
+            "price": 4299,
+            "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&h=800&fit=crop",
+            "battery": "5050 mAh",
+            "screen": "6.7\" LTPO OLED",
+            "processor": "Google Tensor G3",
+            "ram": "12 GB",
+            "storage": "256 GB",
+            "description": "هاتف Google Pixel 8 Pro مع أفضل كاميرا في فئته وتقنيات الذكاء الاصطناعي المتقدمة من Google. يأتي مع 7 سنوات من التحديثات الأمنية."
+        }
+    ]
+}

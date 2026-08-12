@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="متجر جوالات احترافي - أحدث الأجهزة الذكية بأفضل الأسعار">
+    <title id="page-title">MobileZone - متجر الجوالات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass-effect" id="navbar">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <i class="fa-solid fa-mobile-screen-button logo-icon"></i>
+                <span class="brand-name" id="brandName">MobileZone</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#offers" class="nav-link">العروض</a></li>
+                <li><a href="#contact" class="nav-link">حولنا & اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">عالم الجوالات بين يديك — جودة استثنائية وأسعار لا تُقاوم</h1>
+            <p class="hero-subtitle" id="heroSubtitle">اكتشف أحدث الأجهزة الذكية بأفضل العروض في متجرنا المتخصص</p>
+            <a href="#offers" class="btn btn-primary btn-glow">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>تصفح العروض</span>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="section offers-section" id="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>العروض المميزة</span>
+                </h2>
+                <p class="section-subtitle">أحدث الجوالات بأفضل الأسعار والمواصفات</p>
+            </div>
+            <div class="offers-grid" id="offersGrid">
+                <!-- Cards will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-address-book"></i>
+                    <span>حولنا & اتصل بنا</span>
+                </h2>
+                <p class="section-subtitle">نحن هنا لخدمتك على مدار الساعة</p>
+            </div>
+
+            <div class="contact-actions">
+                <a href="#" class="btn btn-secondary glass-effect btn-whatsapp" id="whatsappBtn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>تواصل عبر واتساب</span>
+                </a>
+                <a href="#" class="btn btn-secondary glass-effect btn-location" id="locationBtn" target="_blank">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>موقعنا</span>
+                </a>
+            </div>
+
+            <div class="work-hours-wrapper">
+                <h3 class="work-hours-title">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>مواقيت العمل</span>
+                </h3>
+                <div class="work-hours-container glass-effect">
+                    <div class="time-box time-open">
+                        <i class="fa-solid fa-door-open time-icon"></i>
+                        <span class="time-label">الافتتاح</span>
+                        <span class="time-value" id="openTime">09:00</span>
+                    </div>
+                    <div class="time-divider">
+                        <div class="dashed-line"></div>
+                        <span class="divider-text">
+                            كل يوم<br>
+                            <span class="closed-day">إلا الجمعة</span>
+                        </span>
+                        <div class="dashed-line"></div>
+                    </div>
+                    <div class="time-box time-close">
+                        <i class="fa-solid fa-door-closed time-icon"></i>
+                        <span class="time-label">الإغلاق</span>
+                        <span class="time-value" id="closeTime">22:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <!-- Facebook -->
+                <a href="#" class="social-icon glass-effect" id="facebookLink" target="_blank" rel="noopener noreferrer"
+                    aria-label="فيسبوك">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phone Details Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal glass-effect" id="phoneModal">
+            <button class="modal-close" id="modalClose" aria-label="إغلاق">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image-wrapper">
+                    <img id="modalImage" src="" alt="" loading="lazy">
+                </div>
+                <div class="modal-info">
+                    <h3 class="modal-title" id="modalTitle"></h3>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="specs-grid">
+                        <div class="spec-item glass-effect">
+                            <i class="fa-solid fa-battery-full spec-icon"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">البطارية</span>
+                                <span class="spec-value" id="modalBattery"></span>
+                            </div>
+                        </div>
+                        <div class="spec-item glass-effect">
+                            <i class="fa-solid fa-display spec-icon"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">الشاشة</span>
+                                <span class="spec-value" id="modalScreen"></span>
+                            </div>
+                        </div>
+                        <div class="spec-item glass-effect">
+                            <i class="fa-solid fa-microchip spec-icon"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">المعالج</span>
+                                <span class="spec-value" id="modalProcessor"></span>
+                            </div>
+                        </div>
+                        <div class="spec-item glass-effect">
+                            <i class="fa-solid fa-memory spec-icon"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">الرام</span>
+                                <span class="spec-value" id="modalRam"></span>
+                            </div>
+                        </div>
+                        <div class="spec-item glass-effect">
+                            <i class="fa-solid fa-hard-drive spec-icon"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">السعة</span>
+                                <span class="spec-value" id="modalStorage"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-glow modal-order-btn" id="modalOrderBtn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>اطلب الآن</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer glass-effect">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
